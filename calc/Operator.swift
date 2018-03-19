@@ -10,6 +10,11 @@ import Foundation
  */
 struct Operator {
     
+    // class fields
+    
+    static var definedOperators: [Operator] = []
+    
+    
     // instance fields
     private let symbol: String
     var precedence: Int

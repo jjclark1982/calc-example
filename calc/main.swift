@@ -27,7 +27,7 @@ func divide(a:Int, b:Int)->Int {
 func remainder(a:Int, b:Int)->Int {
     return a % b
 }
-let definedOperators = [
+Operator.definedOperators = [
     Operator(symbol: "+", precedence: 2, operation: add),
     Operator(symbol: "-", precedence: 2, operation: subtract),
     Operator(symbol: "x", precedence: 3, operation: multiply),
@@ -37,9 +37,6 @@ let definedOperators = [
 
 // Creates an ExpressionHelper object
 let expressionHelper: ExpressionHelper = ExpressionHelper()
-
-// Supplies the ExpressionHelper with operator definitions
-expressionHelper.setOperators(operators: definedOperators)
 
 // Catches possible errors
 do {

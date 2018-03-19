@@ -23,17 +23,6 @@ class ExpressionHelper {
      */
     init() {}
     
-    
-    /*
-     * setOperators(operators: [Operator])
-     *
-     * A public method to set defined operators for use.
-     */
-    func setOperators(operators: [Operator]) {
-        self.operators = operators
-    }
-    
-    
     /*
      * setValues(values: [String]) throws
      *
@@ -116,7 +105,7 @@ class ExpressionHelper {
      * Will throw an error if the operator cannot be found (undefined).
      */
     private func getOperator(operatorNode: Node) throws -> Operator {
-        for operatorType in operators {
+        for operatorType in Operator.definedOperators {
             if operatorType.getSymbol() == operatorNode.getValue() {
                 return operatorType
             }
