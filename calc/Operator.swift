@@ -18,7 +18,7 @@ struct Operator {
     // instance fields
     private let symbol: String
     var precedence: Int
-    private let checkRightOperandZero: Bool?
+    private let checkRightOperandZero: Bool = false
     private let operation: (Int, Int) -> Int
     
     
@@ -63,7 +63,7 @@ struct Operator {
      * supplied Int values (the operands) and returns the result.
      */
     func performOperation(operandOne: Int, operandTwo: Int) throws -> Int {
-        if checkRightOperandZero! && operandOne == 0{
+        if checkRightOperandZero && operandOne == 0{
             throw CalculationError.dividedByZero
         }
         return operation(operandTwo, operandOne)
