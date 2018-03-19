@@ -8,11 +8,11 @@ import Foundation
 /*
  * A model class to represent a given Operator.
  */
-class Operator {
+struct Operator {
     
-    // Private class fields
+    // instance fields
     private let symbol: String
-    private let precedence: Int
+    var precedence: Int
     private let checkRightOperandZero: Bool?
     private let operation: (Int, Int) -> Int
     
