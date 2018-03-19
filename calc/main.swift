@@ -28,11 +28,11 @@ func remainder(a:Int, b:Int)->Int {
     return a % b
 }
 Operator.definedOperators = [
-    Operator(symbol: "+", precedence: 2, operation: add),
-    Operator(symbol: "-", precedence: 2, operation: subtract),
-    Operator(symbol: "x", precedence: 3, operation: multiply, checkRightOperandZero: nil),
-    Operator(symbol: "/", precedence: 3, operation: divide, checkRightOperandZero: true),
-    Operator(symbol: "%", precedence: 3, operation: remainder)
+    "+": Operator(symbol: "+", precedence: 2, operation: add),
+    "-": Operator(symbol: "-", precedence: 2, operation: subtract),
+    "x": Operator(symbol: "x", precedence: 3, operation: multiply, checkRightOperandZero: nil),
+    "/": Operator(symbol: "/", precedence: 3, operation: divide, checkRightOperandZero: true),
+    "%": Operator(symbol: "%", precedence: 3, operation: remainder)
 ]
 
 // Creates an ExpressionHelper object

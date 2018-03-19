@@ -105,10 +105,9 @@ class ExpressionHelper {
      * Will throw an error if the operator cannot be found (undefined).
      */
     private func getOperator(operatorNode: Node) throws -> Operator {
-        for operatorType in Operator.definedOperators {
-            if operatorType.getSymbol() == operatorNode.getValue() {
-                return operatorType
-            }
+        let foundOperator = Operator.definedOperators[operatorNode.getValue()]
+        if foundOperator != nil {
+            return foundOperator!
         }
         throw CalculationError.undefinedOperator(undefinedOperator: operatorNode.getValue())
     }

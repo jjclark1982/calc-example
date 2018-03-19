@@ -12,7 +12,7 @@ struct Operator {
     
     // class fields
     
-    static var definedOperators: [Operator] = []
+    static var definedOperators: [String:Operator] = [:]
     
     
     // instance fields
